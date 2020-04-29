@@ -103,7 +103,7 @@ li:hover {
     bottom: -50vh;
     left: 10vw;
 }
-.kysymysteksti h1{
+.kysymysteksti h2{
     margin-top: 5vh;
     margin-bottom: 1vh;
 }
@@ -196,7 +196,7 @@ li:hover {
     
 }
 
-.tilaus h1{
+.tilaus h2{
     max-width: 30vh;
     position: absolute;
     bottom: -30vh;
