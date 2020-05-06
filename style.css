@@ -25,190 +25,64 @@ li:hover {
   background-color: #FFC700;
 }
 
-#etu.otsikkoJaVideo {
-  text-align: center;
-  margin: 40px;
-  font-style: normal;
-}
-
-/*UKK OSIO */
-.UKKpalsta {
-    height: 100vh;
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-}
-
-.UKKpalsta, UKKpalsta h1 {
-    margin-top: 5%;
-    text-align: center;
-}
-
-.puhekupla1 {
-    margin: 2%;
+iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5vh;
-	background: #FDEB4F;
-    border-radius: 10px;
-    height: 10%;
-    width: 20%;
+    margin-bottom: 5vh;
 }
 
-.puhekupla2 {
-    right: -70%;
-    margin-top: 5vh;
-	background: #FFFAD3;
-    border-radius: 10px;
-    height: 10%;
-    width: 20%;
-    position: relative;
-}
-
-.puhekupla1, puhekupla p {
-    text-align: center;
-}
-
-.puhekupla2, puhekupla p {
-    text-align: center;
-}
-
-.puhekupla3 {
-    margin: 2%;
-    margin-top: 5vh;
-	background: #FDEB4F;
-    border-radius: 10px;
-    height: 10%;
-    width: 20%;
-}
-
-.puhekupla3, puhekupla p {
-    text-align: center;
-}
-
-.kysyKysymys {
-    height: 100vh;
-    background-color: #FDEB4F;
-    box-sizing: border-box;
-}
-
-.kysyKysymys img{
-    position: absolute;
-    max-height: 50vh;
-    max-width: 50vw;
-    right: 5vw;
-    bottom: -85vh;
-}
-
-.kysymysteksti{
-    max-width: 30vh;
-    position: absolute;
-    bottom: -50vh;
-    left: 10vw;
-}
-.kysymysteksti h2{
-    margin-top: 5vh;
-    margin-bottom: 1vh;
-}
-
-.kommentti{
-    max-width: 30vh;
-    position: absolute;
-    bottom: -75vh;
-    left: 10vw;
-}
-
-.tekstikenttä{
-    margin-top: 2%;
-}
-/* UKK OSIO */
-
-/*ASENNUS OSIO*/
-.tilaus {
-    height: 100vh;
-    background-color: #FDEB4F;
-    box-sizing: border-box;
-}
-
-.asennus {
-    height: 100vh;
-    background-color: #FFFFFF;
-    box-sizing: border-box;
-}
-
-.asennus img{
-    position: absolute;
-    max-height: 50vh;
-    max-width: 50vw;
-    right: 5vw;
-    bottom: 30vh;
+img {
+    width: 85vw;
+    height: 20vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 20px;
 }
 
-.samikuva img{
-    position: absolute;
-    max-height: 50vh;
-    max-width: 50vw;
-    right: 5vw;
-    bottom: -85vh;
+h1 {
+    text-align:center;
 }
 
-.asennus h1{
+h2{
+    margin-top: 5vh;
     text-align: center;
 }
 
-.step123, .step123 p{
-    margin-top: 1vh;
-    max-width: 50vw;
+p {
+    margin-top: 5vh;
+    text-align: left;
+    padding: 2em;
 }
 
-.step456, .step456 p{
-    margin-top: 1vh;
-    max-width: 50vw;
+footer{
+    background-color: #F6F6F6;
+}
+.etuVideoJaTeksti, .UKKpalsta, .asennus, .etuOhjeetJaTietoa, .tietoaKannattavuus, .tietoaNainToimii, .tietoa10faktaa, .tosiPerhe1{
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    
 }
 
+.tosiElamanSamit, .tietoaYmparisto, .tietoaAsiantuntija, .tosiPerhe2{
+    min-height: 100vh;
+    background-color: #FDEB4F;
+}
+
+.tosiOhjeet{
+    min-height: 50vh;
+    background-color: #FFFFFF;
+}
 
 .linkit button{
-   width: 10vw;
-   height: 3vh;
-   border-radius: 10px;
-   background-color: #FFFAD3;
-}
-
-.linkit button:hover{
-    background-color: lightyellow;
-}
-.fortum{
-    position: absolute;
-    bottom: -45vh;
-    left: 10vw;
-    
-}
-
-.vattenfall{
-    position: absolute;
-    bottom: -50vh;
-    left: 10vw;
-    
-}
-
-.helen{
-    position: absolute;
-    bottom: -55vh;
-    left: 10vw;
-    
-}
-
-.tilaus h2{
-    max-width: 30vh;
-    position: absolute;
-    bottom: -30vh;
-    left: 10vw;
-}
-
-.tilaus p{
-    position: absolute;
-    margin-top: 5vh;
-    bottom: -35vh;
-    left: 10vw;
-}
-
-
-/*ASENNUS OSIO*/
+    width: 10vw;
+    height: 3vh;
+    border-radius: 10px;
+    background-color: #FFFAD3;
+ }
+ 
+ .linkit button:hover{
+     background-color: lightyellow;
+ }
