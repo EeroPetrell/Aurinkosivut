@@ -25,8 +25,9 @@ a {
     text-decoration: none;
 
 }
-a:hover {
-    font-weight: bold ;
+.menu li.item:hover {
+    /*font-weight: bold ;*/
+    background-color: #FFC700;
 }
 
 .menu li{
@@ -73,7 +74,7 @@ li.item.current {
     background: #505050;
     display: inline-block;
     height: 2px;
-    width: 24px;
+    width: 27px;
     position: relative;
 }
 .bars::before,.bars::after{
@@ -81,7 +82,7 @@ li.item.current {
     content: "";
     display: inline-block;
     height: 2px;
-    width: 24px;
+    width: 27px;
     position: absolute;
 }
 .bars::before{
@@ -225,6 +226,7 @@ footer{
      align-self: center;
      transition: 1.0s;
      margin-top: 5vh;
+     font-size: 18px;
  }
  .nappielementti button:hover{
      background-color: #FFC700;
@@ -272,4 +274,28 @@ footer p{
 }
 footer{
     margin-top: 5vh;
+}
+
+/* fonttien koot*/
+
+/*fonttikoko tablet*/
+
+@media all and (min-width: 576px){
+    
+
+}
+
+/* fonttikoko desktop */
+
+@media all and (min-width: 1068px) {
+    p{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 36px
+    }
+    button{
+        font-size: 24px;
+    }
+    
 }
