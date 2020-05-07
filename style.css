@@ -10,7 +10,7 @@ html{
   font-weight: lighter;
 }
 
-/* navi-bar*/
+/* menu */
 nav {
     background-color: #FDEB4F;
     padding: 5px 20px
@@ -37,7 +37,7 @@ a:hover {
     display: block;
 }
 li.page {
-    font-size: 20px;
+    font-size: 16px;
     order: 2
 }
 li.item.current {
@@ -55,6 +55,7 @@ li.item.current {
 }
 .toggle{
     order: 1;
+    height: 27px;
 }
 .item {
     width: 100%;
