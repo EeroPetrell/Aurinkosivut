@@ -1,114 +1,114 @@
 html{
     scroll-behavior: smooth;
-}      
-
-* {
+ }     
+  
+ * {
   padding: 0;
   margin: 0;
   font-family: Verdana;
   color: #505050 ;
   font-weight: lighter;
-}
-
-/* menu */
-nav {
+ }
+  
+ /* menu */
+ nav {
     background-color: #FDEB4F;
     padding: 5px 20px;
     position: fixed;
     width: 100%;
-}
-
-ul {
+ }
+  
+ ul {
   list-style-type: none;
-}
-
-a {
+ }
+  
+ a {
     color: #505050;
     text-decoration: none;
-}
-.menu li.item:hover {
+ }
+ .menu li.item:hover {
     /*font-weight: bold ;*/
     background-color: #FFC700;
-}
-
-.menu li{
+ }
+  
+ .menu li{
     font-size: 16px;
     padding: 15px 5px;
-}
-.menu li a{
+ }
+ .menu li a{
     display: block;
-}
-li.page {
+ }
+ li.page {
     font-size: 16px;
     order: 2;
     margin-right:30px;
-}
-li.item.current {
+ }
+ li.item.current {
     font-weight: 800;
-
-}
-
-/* Mobile menu */
-
-.menu{
+  
+ }
+  
+ /* Mobile menu */
+  
+ .menu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
-.toggle{
+ }
+ .toggle{
     order: 1;
     height: 27px;
-}
-.item {
+ }
+ .item {
     width: 100%;
     text-align: center;
     order: 3;
     display: none;
-}
-.item.active{
+ }
+ .item.active{
     display: block;
-}
-.toggle{
+ }
+ .toggle{
     cursor: pointer;
-}
-.bars{
+ }
+ .bars{
     background: #505050;
     display: inline-block;
     height: 2px;
     width: 27px;
     position: relative;
-}
-.bars::before,.bars::after{
+ }
+ .bars::before,.bars::after{
     background: #505050;
     content: "";
     display: inline-block;
     height: 2px;
     width: 27px;
     position: absolute;
-}
-.bars::before{
+ }
+ .bars::before{
     top: 7px;
-}
-.bars::after{
+ }
+ .bars::after{
     top: -7px;
-}
-
-/* tablet menu*/
-@media all and (min-width: 576px){
-    
+ }
+  
+ /* tablet menu*/
+ @media all and (min-width: 576px){
+   
     .logo{
         flex: 1;
     }
     .toggle{
         order: 2;
     }
-    
-
-}
-
-/* desktop menu*/
-@media all and (min-width: 768px){
+   
+  
+ }
+  
+ /* desktop menu*/
+ @media all and (min-width: 768px){
     .item{
         display: block;
         width: auto;
@@ -129,79 +129,105 @@ li.item.current {
     .menu {
         justify-content: space-evenly;
     }
-
-
-}
-
-
-
-
-
-iframe{
+  
+  
+ }
+  
+  
+  
+  
+  
+ iframe{
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
     margin-bottom: 5vh;
-}
-
-img {
+ }
+  
+ img {
     width: 85vw;
     height: 20vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-}
-
-h1 {
+    padding-top: 5vh;
+ }
+  
+ h1 {
     text-align:center;
-}
-
-h2{
+ }
+  
+ h2{
     margin-top: 5vh;
     text-align: center;
-}
-
-p {
+ }
+  
+ p {
     margin-top: 5vh;
     text-align: left;
     padding: 2em;
-}
-
-footer{
+ }
+  
+ footer{
     background-color: #F6F6F6;
-}
-.etuVideoJaTeksti, .UKKpalsta, .asennus, .etuOhjeetJaTietoa, .tietoaKannattavuus, .tietoaNainToimii, .tietoa10faktaa, .tosiPerhe1{
+ }
+ .etuVideoJaTeksti, .UKKpalsta, .asennus, .etuOhjeetJaTietoa, .tietoaKannattavuus, .tietoaNainToimii, .tietoa10faktaa, .tosiPerhe1{
     min-height: 100vh;
     background-color: #FFFFFF;
-    
-}
-
-.tosiElamanSamit, .tietoaYmparisto, .tietoaAsiantuntija, .tosiPerhe2{
+   
+ }
+  
+ .tosiElamanSamit, .tietoaYmparisto, .tietoaAsiantuntija, .tosiPerhe2, .linkit, .kommenttiosio{
     min-height: 100vh;
     background-color: #FDEB4F;
-}
-
-.tosiOhjeet{
+ }
+  
+ .tosiOhjeet{
     min-height: 50vh;
     background-color: #FFFFFF;
-}
-
-.linkit button{
-    width: 10vw;
-    height: 3vh;
-    border-radius: 10px;
+ }
+  
+ .linkit .nappielementti button{
     background-color: #FFFAD3;
  }
- 
- .linkit button:hover{
-     background-color: lightyellow;
+  
+ .linkit .elementcontainer1 {
+    flex-direction: column;
+    align-items: center;
  }
-
-
+  
+ .kommentti{
+    text-align: center;
+ }
+  
+ textarea{
+    resize: none;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 50%;
+    min-height: 7vh;
+    font-size: inherit;
+ }
+  
+ .kommentti button {
+    background-color: #FFFAD3;
+    width: fit-content;
+    padding: 15px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    align-self: center;
+    transition: 1.0s;
+    margin-top: 5vh;
+    font-size: 18px;
+ }
  /* nappielementti mobile*/
-
+  
  .nappielementti{
     display: flex;
     justify-content: space-between;
@@ -233,63 +259,63 @@ footer{
  .nappielementti button:hover{
      background-color: #FFC700;
  }
-
+  
  .elementcontainer1{
      display: flex;
      flex-direction: column;
  }
-
+  
  /* nappielementti tablet */
-
-@media all and (min-width: 576px){
-    
+  
+ @media all and (min-width: 576px){
+   
     .elementcontainer1{
         flex-direction: row;
     }
-    
-
-}
-
-/* nappielementti desktop */
-
-@media all and (min-width: 768px) {
+   
+  
+ }
+  
+ /* nappielementti desktop */
+  
+ @media all and (min-width: 768px) {
     .nappielementti{
         max-width: 35%;
     }
     .elementcontainer1{
         justify-content: space-around;
     }
-}
-
-/*footer */
-
-footer p.copyright{
+ }
+  
+ /*footer */
+  
+ footer p.copyright{
     text-align: center;
     font-size: 12px;
     max-width: 100%;
-}
-footer p{
+ }
+ footer p{
     max-width: 30%;
     font-weight: lighter;
     margin-top: 1vh;
     font-size: 13px;
-}
-footer{
+ }
+ footer{
     margin-top: 5vh;
-}
-
-/* fonttien koot*/
-
-/*fonttikoko tablet*/
-
-@media all and (min-width: 576px){
-    
-
-}
-
-/* fonttikoko desktop */
-
-@media all and (min-width: 1068px) {
+ }
+  
+ /* fonttien koot*/
+  
+ /*fonttikoko tablet*/
+  
+ @media all and (min-width: 576px){
+   
+  
+ }
+  
+ /* fonttikoko desktop */
+  
+ @media all and (min-width: 1068px) {
     p{
         font-size: 18px;
     }
@@ -299,5 +325,6 @@ footer{
     button{
         font-size: 24px;
     }
-    
-}
+   
+ }
+ 

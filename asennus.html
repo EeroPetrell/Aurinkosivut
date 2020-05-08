@@ -1,95 +1,84 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-        crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-        $(".toggle").on("click", function() {
-            if ($(".item").hasClass("active")) {
-                $(".item").removeClass("active");
-            } else {
-                $(".item").addClass("active");
-            }
-        });
-    });
-    </script>
-    </head>
-    <body>
-        <nav>
-            <ul class="menu">
-                <li class="item"><a href=index.html>ETUSIVU</a></li>
-                <li class="item"><a href=tietoa.html>TIETOA</a></li>
-                <li class="item"><a href=tosi.html>TOSIELÄMÄN SAMIT</a></li>
-                <li class="item current"><a href=asennus.html>NÄIN ASENNAT</a></li>
-                <li class="item"><a href=UKK.html>USEIN KYSYTTYÄ</a></li>
-                <li class="toggle"><span class="bars"></span></li>
-                <li class="page">NÄIN ASENNAT</li>
-            </ul>
-        </nav>
-        <div id = "asennusContent">
-            <div class = "asennus">
-                <h1>Näin asennat aurinkopaneelit</h1> 
-                <img src="kuvat/omaasahkoa.png" alt="Omaa Sähköä">
-                <div class = "step123">
-                    <p>
-                        1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
-                    </p>
-                    <p>
-                        2: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
-                    </p>
-                    <p>
-                        3: Lorem ipsum dolor sit amet, consectetur adipisci elit?
-                    </p>
-                </div>
-                <div class = "step456">
-                    <p>
-                        4: Lorem ipsum dolor sit amet, consectetur adipisci elit?
-                    </p>
-                    <p>
-                        5: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
-                    </p>
-                    <p>
-                        6: Lorem ipsum dolor sit amet, consectetur adipisci elit?
-                    </p>
-                </div>
-            </div>
-
-            <div class = "tosiElamanSamit">
-                    <h2>Tilaa paneelit täältä</h2>
-                    <p>
-                        Jos omien aurinkopaneeleiden tilaaminen kiinnostaa, voit vertailla vaihtoehtoja alla olevista linkeistä.
-                    </p>
-                    <div class="linkit">
-                        <div class="fortum">
-                            <button onclick="location.href='https://www.fortum.fi/kotiasiakkaille/aurinkopaneelit/aurinkopaneelit'" type="button">
-                                Fortum
-                            </button>
-                        </div>
-                        <div class="vattenfall">
-                            <button onclick="location.href='https://www.vattenfall.fi/aurinkopaneeli/'" type="button">
-                                Vattenfall
-                            </button>
-                        </div>
-                        <div class="helen">
-                            <button onclick="location.href='https://www.helen.fi/aurinkopaneelit/aurinkosahko'" type="button">
-                                Helen
-                            </button>
-                        </div>
-                    </div>
-                    <div class="samikuva">
-                        <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
-                    </div>
-            </div>
-        </div>
-        <footer>
-            <p>Tässä on footer</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam vitae odit ipsa aut quidem. Dolorum autem consequuntur aperiam odit ea quia temporibus. Cumque laborum nemo recusandae. Vitae, odit velit.</p>
-            <p class="copyright">© Loistava viestinnän ryhmä</p>
-        </footer>
-    </body>
+   <head>
+       <meta charset = "UTF-8">
+       <link rel="stylesheet" type="text/css" href="style.css" />
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+       crossorigin="anonymous"></script>
+   <script>
+       $(function() {
+       $(".toggle").on("click", function() {
+           if ($(".item").hasClass("active")) {
+               $(".item").removeClass("active");
+           } else {
+               $(".item").addClass("active");
+           }
+       });
+   });
+   </script>
+   </head>
+   <body>
+       <nav>
+           <ul class="menu">
+               <li class="item"><a href=index.html>ETUSIVU</a></li>
+               <li class="item"><a href=tietoa.html>TIETOA</a></li>
+               <li class="item"><a href=tosi.html>TOSIELÄMÄN SAMIT</a></li>
+               <li class="item current"><a href=asennus.html>NÄIN ASENNAT</a></li>
+               <li class="item"><a href=UKK.html>USEIN KYSYTTYÄ</a></li>
+               <li class="toggle"><span class="bars"></span></li>
+               <li class="page">NÄIN ASENNAT</li>
+           </ul>
+       </nav>
+       <div id = "asennusContent">
+           <div class = "asennus">
+               <h1>Näin asennat aurinkopaneelit</h1>
+               <img src="kuvat/omaasahkoa.png" alt="Omaa Sähköä">
+               <div class = "step123">
+                   <p>
+                       1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
+                   </p>
+                   <p>
+                       2: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
+                   </p>
+                   <p>
+                       3: Lorem ipsum dolor sit amet, consectetur adipisci elit?
+                   </p>
+               </div>
+               <div class = "step456">
+                   <p>
+                       4: Lorem ipsum dolor sit amet, consectetur adipisci elit?
+                   </p>
+                   <p>
+                       5: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
+                   </p>
+                   <p>
+                       6: Lorem ipsum dolor sit amet, consectetur adipisci elit?
+                   </p>
+               </div>
+           </div>
+ 
+           <div class = "linkit">
+                       <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
+                       <h2>Tilaa paneelit täältä</h2>
+                   <div class="elementcontainer1">
+                       <div class = "nappielementti">
+                           <button onclick="location.href='https://www.fortum.fi/kotiasiakkaille/aurinkopaneelit/aurinkopaneelit'">Fortum</button>
+                       </div>
+                       <div class = "nappielementti">
+                           <button onclick="location.href='https://www.vattenfall.fi/aurinkopaneeli/'">Vattenfall</button>
+                       </div>
+                       <div class = "nappielementti">
+                           <button onclick="location.href='https://www.helen.fi/aurinkopaneelit/aurinkosahko'">HELEN</button>
+                       </div>
+                   </div>
+           </div>
+       </div>
+       <footer>
+           <p>Tässä on footer</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam vitae odit ipsa aut quidem. Dolorum autem consequuntur aperiam odit ea quia temporibus. Cumque laborum nemo recusandae. Vitae, odit velit.</p>
+           <p class="copyright">© Loistava viestinnän ryhmä</p>
+       </footer>
+   </body>
 </html>
