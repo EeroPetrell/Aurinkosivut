@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-        crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-        $(".toggle").on("click", function() {
-            if ($(".item").hasClass("active")) {
-                $(".item").removeClass("active");
-            } else {
-                $(".item").addClass("active");
-            }
-        });
-    });
-    </script>
-    </head>
-    <body>
-        <nav>
-            <ul class="menu">
-                <li class="item"><a href=index.html>ETUSIVU</a></li>
-                <li class="item"><a href=tietoa.html>TIETOA</a></li>
-                <li class="item"><a href=tosi.html>TOSIELÄMÄN SAMIT</a></li>
-                <li class="item"><a href=asennus.html>NÄIN ASENNAT</a></li>
-                <li class="item current"><a href=UKK.html>USEIN KYSYTTYÄ</a></li>
-                <li class="toggle"><span class="bars"></span></li>
-                <li class="page">USEIN KYSYTTYÄ</li>
-            </ul>
-        </nav>
-        <div id = "UKK.content">
-            <div class = "UKKpalsta">
-                <h1>Usein kysytyt kysymykset</h1> 
-                <div class = "puhekupla1">
-                    <p>
-                        KYSYMYS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
-                    </p>
-                </div>
-                <div class = "puhekupla2">
-                    <p>
-                        VASTAUS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
-                    </p>
-                </div>
-                <div class = "puhekupla3">
-                    <p>
-                        Näitä voi lisätä copypastella tässä vaiheessa.
-                    </p>
-                </div>
-            </div>
+   <head>
+       <meta charset = "UTF-8">
+       <link rel="stylesheet" type="text/css" href="style.css" />
+       <script
+       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+       integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+       crossorigin="anonymous"></script>
+   <script>
+       $(function() {
+       $(".toggle").on("click", function() {
+           if ($(".item").hasClass("active")) {
+               $(".item").removeClass("active");
+           } else {
+               $(".item").addClass("active");
+           }
+       });
+   });
+   </script>
+   
+   </head>
+   <body>
+       <nav>
+           <ul class="menu">
+               <li class="item"><a href=index.html>ETUSIVU</a></li>
+               <li class="item"><a href=tietoa.html>TIETOA</a></li>
+               <li class="item"><a href=tosi.html>TOSIELÄMÄN SAMIT</a></li>
+               <li class="item"><a href=asennus.html>NÄIN ASENNAT</a></li>
+               <li class="item current"><a href=UKK.html>USEIN KYSYTTYÄ</a></li>
+               <li class="toggle"><span class="bars"></span></li>
+               <li class="page">USEIN KYSYTTYÄ</li>
+           </ul>
+       </nav>
+       <div id = "UKK.content">
+           <div class = "UKKpalsta">
+               <h1>Usein kysytyt kysymykset</h1>
 
-            <div class = "tosiElamanSamit">
-                <div class="kysymysteksti">
-                    <h2>Kysy kysymys</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor 
-                    incidunt ut labore et dolore magna aliqua. 
-                </p>
-                </div>
-                <form class="kommentti">
-                    <input name="name" type="text" value="Nimi" /> <br/> 
-                    <textarea class="tekstikenttä" cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/> 
-                    <button type="submit" value="Submit">Lähetä</button>
-                </form>
-                <div class="samikuva">
-                    <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
-                </div>
-               
-            </div>
-        
-        </div>
-        <footer>
-            <p>Tässä on footer</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam vitae odit ipsa aut quidem. Dolorum autem consequuntur aperiam odit ea quia temporibus. Cumque laborum nemo recusandae. Vitae, odit velit.</p>
-            <p class="copyright">© Loistava viestinnän ryhmä</p>
-        </footer>
-    </body>
+               <div class = "kysymys">
+                   <p>
+                       KYSYMYS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
+                   </p>
+               </div>
+               <div class = "vastaus">
+                   <p>
+                       VASTAUS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
+                   </p>
+               </div>
+               <div id="kysymykset"></div>
+           </div>
+           <div class = "kommenttiosio">
+               <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
+               <div class="kysymysteksti">
+                   <h2>Kysy kysymys</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor
+                   incidunt ut labore et dolore magna aliqua.
+               </p>
+               </div>
+               <div class="kommentti">
+                    <script>
+
+                            var questions = document.querySelector('#kysymykset');
+                        
+                            function addQuestion() {
+                                var text = document.getElementById("newQuestion").value;
+                                console.log(text)
+                                const question = document.createElement('div');
+                        
+                                question.classList.add('question');
+                                question.innerHTML = 
+                                    `<div class="kysymys"><p>${text}</p></div>
+                                    <div class="vastaus"><p>Asiantuntija vastaa kysymykseen pian!</p></div>`;
+                        
+                                questions.appendChild(question);
+                        
+                                text.value = '';
+                            }
+                        
+                            </script>
+                   <textarea id="newQuestion" cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/>
+                   <button id="addQuestionButton" onclick="addQuestion()">Lähetä</button>
+                   
+               </div>              
+           </div>
+      
+       </div>
+       <footer>
+           <p>Tässä on footer</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quam vitae odit ipsa aut quidem. Dolorum autem consequuntur aperiam odit ea quia temporibus. Cumque laborum nemo recusandae. Vitae, odit velit.</p>
+           <p class="copyright">© Loistava viestinnän ryhmä</p>
+       </footer>
+   </body>
 </html>
