@@ -16,6 +16,7 @@ html{
     padding: 5px 20px;
     position: fixed;
     width: 100%;
+    z-index: 1;
  }
   
  ul {
@@ -327,4 +328,61 @@ html{
     }
    
  }
- 
+
+ /*UKK kysymysten ja vastausten muotoilu*/
+
+.kysymys {
+    background-color: #FFFAD3;
+    width: 60%;
+    padding: 0px;
+    border-radius: 20px;
+    margin-top: 15vh;
+    margin-left: 5vh;
+    font-size: 18px;
+}
+
+ /*puhekuplan kolmio*/
+.kysymys:after {
+	content: '';
+	position: relative;
+	bottom: -2.5em;
+    left: 8%;
+	width: 0;
+	height: 0;
+	border: 40px solid transparent;
+	border-top-color: #FFFAD3;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left:  0px;
+    margin-bottom: 0px;
+    z-index: 0;
+}
+
+.vastaus {
+    background-color: #FFFAD3;
+    width: 60%;
+    position: relative;
+    right: -30%;
+    padding: 0px;
+    border-radius: 20px;
+    margin-top: 15vh;
+    margin-left: 5vh;
+    font-size: 18px;
+}
+
+ /*kolmio*/
+.vastaus:after {
+	content: '';
+	position: relative;
+	bottom: -2.5em;
+    left: 88%;
+	width: 0;
+	height: 0;
+	border: 40px solid transparent;
+	border-top-color: #FFFAD3;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left:  0px;
+    margin-bottom: 0px;
+    z-index: 0;
+}
