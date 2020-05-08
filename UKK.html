@@ -18,6 +18,7 @@
        });
    });
    </script>
+   
    </head>
    <body>
        <nav>
@@ -34,23 +35,19 @@
        <div id = "UKK.content">
            <div class = "UKKpalsta">
                <h1>Usein kysytyt kysymykset</h1>
-               <div class = "puhekupla1">
+
+               <div class = "kysymys">
                    <p>
                        KYSYMYS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
                    </p>
                </div>
-               <div class = "puhekupla2">
+               <div class = "vastaus">
                    <p>
                        VASTAUS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit. Lorem ipsum dolor sit amet, consectetur adipisci elit.
                    </p>
                </div>
-               <div class = "puhekupla3">
-                   <p>
-                       Näitä voi lisätä copypastella tässä vaiheessa.
-                   </p>
-               </div>
+               <div id="kysymykset"></div>
            </div>
- 
            <div class = "kommenttiosio">
                <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
                <div class="kysymysteksti">
@@ -61,8 +58,27 @@
                </p>
                </div>
                <div class="kommentti">
-                   <textarea cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/>
-                   <button type="submit" value="Submit">Lähetä</button>
+                    <script>
+
+                            var questions = document.querySelector('#kysymykset');
+                        
+                            function addQuestion() {
+                                var text = document.getElementById("newQuestion").value;
+                                console.log(text)
+                                const question = document.createElement('div');
+                        
+                                question.classList.add('question');
+                                question.innerHTML = `<div class="kysymys"><p>${text}</p></div>`;
+                        
+                                questions.appendChild(question);
+                        
+                                text.value = '';
+                            }
+                        
+                            </script>
+                   <textarea id="newQuestion" cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/>
+                   <button id="addQuestionButton" onclick="addQuestion()">Lähetä</button>
+                   
                </div>              
            </div>
       
