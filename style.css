@@ -30,6 +30,9 @@ a {
     /*font-weight: bold ;*/
     background-color: #FFC700;
 }
+.menu li.item{
+    transition: 1.0s;
+}
 
 .menu li{
     font-size: 16px;
