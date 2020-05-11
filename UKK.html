@@ -32,10 +32,9 @@
                <li class="page">USEIN KYSYTTYÄ</li>
            </ul>
        </nav>
-       <div id = "UKK.content">
-           <div class = "UKKpalsta">
-               <h1>Usein kysytyt kysymykset</h1>
-
+       <div>
+        <div class="videootsikko"><h1>Usein kysytyt kysymykset</h1></div>
+           <div>
                <div class = "kysymys">
                    <p>
                        KYSYMYS 1: Lorem ipsum dolor sit amet, consectetur adipisci elit?
@@ -48,40 +47,42 @@
                </div>
                <div id="kysymykset"></div>
            </div>
-           <div class = "kommenttiosio">
-               <img src="kuvat/sami.jpeg" alt="Sami Suomalainen">
-               <div class="kysymysteksti">
-                   <h2>Kysy kysymys</h2>
-               <p>
-                   Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor
-                   incidunt ut labore et dolore magna aliqua.
-               </p>
-               </div>
-               <div class="kommentti">
-                    <script>
-
-                            var questions = document.querySelector('#kysymykset');
+           <div class = "kommenttiosio keltainen">
+               <div class="teksti">
+                    <div class="kysymysteksti">
+                        <h2>KYSY KYSYMYS</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor
+                            incidunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="kommentti">
+                        <script>
+    
+                                var questions = document.querySelector('#kysymykset');
+                            
+                                function addQuestion() {
+                                    var text = document.getElementById("newQuestion").value;
+                                    console.log(text)
+                                    const question = document.createElement('div');
+                            
+                                    question.classList.add('question');
+                                    question.innerHTML = 
+                                        `<div class="kysymys"><p>${text}</p></div>
+                                        <div class="vastaus"><p>Asiantuntija vastaa kysymykseen pian!</p></div>`;
+                            
+                                    questions.appendChild(question);
+                            
+                                    text.value = '';
+                                }
+                            
+                                </script>
+                        <textarea id="newQuestion" cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/>
+                        <button id="addQuestionButton" onclick="addQuestion()">Lähetä</button>
                         
-                            function addQuestion() {
-                                var text = document.getElementById("newQuestion").value;
-                                console.log(text)
-                                const question = document.createElement('div');
-                        
-                                question.classList.add('question');
-                                question.innerHTML = 
-                                    `<div class="kysymys"><p>${text}</p></div>
-                                    <div class="vastaus"><p>Asiantuntija vastaa kysymykseen pian!</p></div>`;
-                        
-                                questions.appendChild(question);
-                        
-                                text.value = '';
-                            }
-                        
-                            </script>
-                   <textarea id="newQuestion" cols="30" rows="5">Kirjoita kysymys tähän.</textarea><br/>
-                   <button id="addQuestionButton" onclick="addQuestion()">Lähetä</button>
-                   
-               </div>              
+                    </div>
+               </div>  
+               <div class="kuva"><img src="kuvat/sami.jpeg" alt="Sami Suomalainen"></div>            
            </div>
       
        </div>
