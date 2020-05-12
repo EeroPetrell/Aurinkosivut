@@ -366,6 +366,8 @@ p {
 textarea{
    resize: none;
    border-radius: 10px;
+   border: 0;
+   padding: 5px;
    text-align: center;
    min-width: 50%;
    min-height: 7vh;
