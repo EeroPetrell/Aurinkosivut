@@ -9,11 +9,64 @@ html{
   color: #505050 ;
   font-weight: lighter;
  }
+ /* fonttien koot*/
+ h1 {
+   text-align:center;
+   padding: 20px;
+   padding-top: 100px;
+   font-size: 24px;
+}
+ 
+h2{
+   margin-top: 15px;
+   text-align: start;
+   line-height: 1.75;
+   font-size: 20px;
+}
+h3{
+   font-size: 42px;
+   color: #FDEB4F;
+}
+ 
+p {
+   margin: 2vh 0vh;
+   text-align: left;
+   line-height: 1.25;
+   font-size: 16px;
+} 
+ /*fonttikoko tablet*/
   
- /* menu */
+ @media all and (min-width: 576px){
+   h1{
+      font-size: 30px;
+   }
+   h2{
+      font-size: 24px;
+   }
+}
+ 
+/* fonttikoko desktop */
+ 
+@media all and (min-width: 1068px) {
+   p{
+       font-size: 18px;
+   }
+   h2{
+       font-size: 36px
+   }
+   button{
+       font-size: 24px;
+   }
+   h1{
+      font-size: 36px;
+   }
+  
+}
+
+  
+ /* mobile menu */
  nav {
     background-color: #FDEB4F;
-    padding: 5px 20px;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -28,16 +81,15 @@ html{
     text-decoration: none;
  }
  .menu li.item:hover {
-    /*font-weight: bold ;*/
     background-color: #FFC700;
-}
-.menu li.item{
-    transition: 1.0s;
-}
+ }
+ .menu li.item{
+    transition: 0.5s;
+ }
 
-.menu li{
+ .menu li{
     font-size: 16px;
-    padding: 15px 5px;
+    padding: 20px 25px;
  }
  .menu li a{
     display: block;
@@ -50,9 +102,7 @@ html{
  li.item.current {
     font-weight: 800;
   
- }
-  
- /* Mobile menu */
+ } 
   
  .menu{
     display: flex;
@@ -66,7 +116,7 @@ html{
  }
  .item {
     width: 100%;
-    text-align: center;
+    text-align: start;
     order: 3;
     display: none;
  }
@@ -100,15 +150,12 @@ html{
   
  /* tablet menu*/
  @media all and (min-width: 576px){
-   
     .logo{
         flex: 1;
     }
     .toggle{
         order: 2;
-    }
-   
-  
+    } 
  }
   
  /* desktop menu*/
@@ -128,109 +175,113 @@ html{
         display: none;
     }
     .menu li{
-        padding: 15px 10px;
+        padding: 20px 10px;
     }
     .menu {
         justify-content: space-evenly;
     }
-  
-  
  }
   
-  
-  
-  
-  
- iframe{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
- }
-  
- img {
-    width: 85vw;
-    height: 20vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    padding-top: 5vh;
- }
-  
- h1 {
-    text-align:center;
- }
-  
- h2{
-    margin-top: 5vh;
-    text-align: center;
- }
-  
- p {
-    margin-top: 5vh;
-    text-align: left;
-    padding: 2em;
- }
-  
- footer{
-    background-color: #F6F6F6;
- }
- .etuVideoJaTeksti, .UKKpalsta, .asennus, .etuOhjeetJaTietoa, .tietoaKannattavuus, .tietoaNainToimii, .tietoa10faktaa, .tosiPerhe1{
-    min-height: 100vh;
-    background-color: #FFFFFF;
-   
- }
-  
- .tosiElamanSamit, .tietoaYmparisto, .tietoaAsiantuntija, .tosiPerhe2, .linkit, .kommenttiosio{
-    min-height: 100vh;
-    background-color: #FDEB4F;
- }
-  
- .tosiOhjeet{
-    min-height: 50vh;
-    background-color: #FFFFFF;
- }
-  
- .linkit .nappielementti button{
-    background-color: #FFFAD3;
- }
-  
- .linkit .elementcontainer1 {
+ /*video ja otsikko mobiili*/ 
+ .videootsikko{
+    display: flex;
     flex-direction: column;
+    justify-items: center;
     align-items: center;
  }
-  
- .kommentti{
-    text-align: center;
+ iframe{
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1vh 0vh;
  }
-  
- textarea{
-    resize: none;
-    border-radius: 10px;
-    text-align: center;
-    min-width: 50%;
-    min-height: 7vh;
-    font-size: inherit;
+ button.videonappi{
+    align-items: center;
  }
+
+/* video tablet*/
+@media all and (min-width: 576px){
+
+}
+ 
+/* video desktop*/
+@media all and (min-width: 768px){
+   iframe{
+         display: block;
+         width: 80vw;
+         height: 50vw;
+   }
+   .videootsikko button{
+      display: none;
+   }
+}
   
- .kommentti button {
-    background-color: #FFFAD3;
-    width: fit-content;
-    padding: 15px;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 20px;
+ /*kuvat mobile */
+ div.kuva{
+   display: flex;
+   margin: 5vw;
+   align-content: center;
+   justify-content: center;
+   order: -1;
+ }
+ img {
+    width: 80vw;
+    height: 50vw;
+    object-fit: cover;
+    border-radius: 55px;
     align-self: center;
-    transition: 1.0s;
-    margin-top: 5vh;
-    font-size: 18px;
  }
+
+ /*kuvat desktop*/
+ @media all and (min-width: 768px){
+   img{
+      width: 40vw;
+      height: 40vw;
+      max-height: 500px;
+   }
+   div.kuva{
+      order: unset;
+   }
+}
+ 
+/* valkoinen / keltainen tausta tekstille */
+ div.teksti{
+   display: flex;
+   margin: 5vw;
+   justify-content: center;
+   flex-direction: column;
+ }
+ div.valkoinen, div.keltainen {
+   display: flex;
+   flex-direction: column;
+   margin: 3vh 0vh;
+ }
+ div.valkoinen{
+   background-color: white;
+ }
+
+ div.keltainen{
+   background-color: #FDEB4F;
+ }
+
+/* tablet taustat */
+ @media all and (min-width: 576px){
+
+ }
+/* desktop taustat */
+ @media all and (min-width: 768px){
+   div.keltainen, div.valkoinen{
+      flex-direction: row;
+   }
+ }
+
  /* nappielementti mobile*/
+
+ .elementcontainer1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
   
  .nappielementti{
     display: flex;
@@ -245,7 +296,7 @@ html{
     text-align: start;
     padding: 5px 20px;
  }
- .nappielementti button{
+ button{
      background-color: #FDEB4F;
      width: fit-content;
      padding: 15px;
@@ -256,136 +307,158 @@ html{
      display: inline-block;
      border-radius: 20px;
      align-self: center;
-     transition: 1.0s;
+     transition: 0.5s;
      margin-top: 5vh;
      font-size: 18px;
  }
- .nappielementti button:hover{
+ button:hover, .keltainen button:hover{
      background-color: #FFC700;
  }
-  
- .elementcontainer1{
-     display: flex;
-     flex-direction: column;
- }
+ .keltainen button{
+   background-color: #FFFAD3;
+}
   
  /* nappielementti tablet */
   
- @media all and (min-width: 576px){
-   
+ @media all and (min-width: 576px){ 
     .elementcontainer1{
         flex-direction: row;
     }
-   
-  
  }
-  
+
  /* nappielementti desktop */
   
  @media all and (min-width: 768px) {
     .nappielementti{
         max-width: 35%;
     }
+    .teksti .nappielementti{
+       max-width: 100%;
+    }
     .elementcontainer1{
         justify-content: space-around;
     }
  }
   
- /*footer */
-  
+ /*footer*/
  footer p.copyright{
     text-align: center;
     font-size: 12px;
     max-width: 100%;
  }
  footer p{
-    max-width: 30%;
+    max-width: 60%;
     font-weight: lighter;
-    margin-top: 1vh;
     font-size: 13px;
+    padding: 2vh 4vh;
  }
  footer{
-    margin-top: 5vh;
- }
-  
- /* fonttien koot*/
-  
- /*fonttikoko tablet*/
-  
- @media all and (min-width: 576px){
-   
-  
- }
-  
- /* fonttikoko desktop */
-  
- @media all and (min-width: 1068px) {
-    p{
-        font-size: 18px;
-    }
-    h2{
-        font-size: 36px
-    }
-    button{
-        font-size: 24px;
-    }
-   
+    margin-top: 8vh;
+    background-color: #F6F6F6;
  }
 
  /*UKK kysymysten ja vastausten muotoilu*/
 
-.kysymys {
-    background-color: #FFFAD3;
-    width: 60%;
-    padding: 0px;
-    border-radius: 20px;
-    margin-top: 15vh;
-    margin-left: 5vh;
-    font-size: 18px;
+.kommentti{
+   text-align: center;
+}
+ 
+textarea{
+   resize: none;
+   border-radius: 10px;
+   border: 0;
+   padding: 5px;
+   text-align: center;
+   min-width: 50%;
+   min-height: 7vh;
+   font-size: inherit;
+}
+.kysymys p, .vastaus p{
+   padding: 20px;
+   text-align: start;
+}
+.kysymysteksti {
+    margin-bottom: 4vh;
+}
+
+.kysymys, .vastaus{
+   width: 60%;
+   padding: 0px;
+   border-radius: 20px;
+   margin: 7vh 0vh;
+   margin-left: 5vh;
+   font-size: 16px;
+}
+.vastaus {
+   position: relative;
+   right: -30%;
+   background-color: #FFFAD3;
+}
+.kysymys{
+   background-color:#FDEB4F;
 }
 
  /*puhekuplan kolmio*/
-.kysymys:after {
+.kysymys:after, .vastaus::after {
 	content: '';
-	position: relative;
-	bottom: -2.5em;
-    left: 8%;
+   position: relative;
+   bottom: -2.5em;
 	width: 0;
 	height: 0;
-	border: 40px solid transparent;
-	border-top-color: #FFFAD3;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left:  0px;
-    margin-bottom: 0px;
-    z-index: 0;
+	border-style: solid;
+   border-width: 40px 40px 0 40px;
 }
 
-.vastaus {
-    background-color: #FFFAD3;
-    width: 60%;
-    position: relative;
-    right: -30%;
-    padding: 0px;
-    border-radius: 20px;
-    margin-top: 15vh;
-    margin-left: 5vh;
-    font-size: 18px;
+.vastaus::after {
+   border-color:#FFFAD3 transparent transparent transparent;
+   left: 70%;
+}
+.kysymys::after {
+   border-color: #FDEB4F transparent transparent transparent;
+   left: 8%;
 }
 
- /*kolmio*/
-.vastaus:after {
-	content: '';
-	position: relative;
-	bottom: -2.5em;
-    left: 88%;
-	width: 0;
-	height: 0;
-	border: 40px solid transparent;
-	border-top-color: #FFFAD3;
-	border-bottom: 0;
-	border-left: 0;
-	margin-left:  0px;
-    margin-bottom: 0px;
-    z-index: 0;
+/* listaus mobile */
+ol{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   list-style: none; 
+   counter-reset: li;
+   justify-content: space-between;
+}
+ol li::before {
+   content: counter(li); 
+   color:#FDEB4F;
+   font-size: 42px;
+   display: inline-block; 
+   margin-right: 10px;
+}
+
+ol li{
+   padding: 5px;
+   counter-increment: li;
+}
+.listaus h2{
+   padding-inline-start: 10px;
+   font-size: 30px;
+}
+
+
+/* listaus desktop */
+@media all and (min-width: 768px) {
+   ol li::before {
+      font-size: 48px;
+   }
+   div.listaus{
+      display: flex;
+      flex-direction: row;
+   }
+   ol li{
+      width: 47%;
+   }
+   .listaus h2{
+      font-size: 36px;
+      margin-bottom: 15px;
+   }
 }
