@@ -18,7 +18,6 @@
        });
    });
    </script>
-   
    </head>
    <body>
        <nav>
@@ -57,34 +56,13 @@
                         </p>
                     </div>
                     <div class="kommentti">
-                        <script>
-    
-                                var questions = document.querySelector('#kysymykset');
-                            
-                                function addQuestion() {
-                                    var text = document.getElementById("newQuestion").value;
-                                    console.log(text)
-                                    const question = document.createElement('div');
-                            
-                                    question.classList.add('question');
-                                    question.innerHTML = 
-                                        `<div class="kysymys"><p>${text}</p></div>
-                                        <div class="vastaus"><p>Asiantuntija vastaa kysymykseen pian!</p></div>`;
-                            
-                                    questions.appendChild(question);
-                            
-                                    text.value = '';
-                                }
-                            
-                                </script>
+                        <script src = "UKK.js"></script>
                         <textarea id="newQuestion" cols="30" rows="5" placeholder="Kirjoita kysymys tähän..."></textarea><br/>
                         <button id="addQuestionButton" onclick="addQuestion()">Lähetä</button>
-                        
                     </div>
-               </div>  
-               <div class="kuva"><img src="kuvat/sami.jpeg" alt="Sami Suomalainen"></div>            
+                </div>
+                <div class="kuva"><img src="kuvat/sami.jpeg" alt="Sami Suomalainen"></div>
            </div>
-      
        </div>
        <footer>
            <p>Tässä on footer</p>

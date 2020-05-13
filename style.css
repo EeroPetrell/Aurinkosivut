@@ -467,3 +467,34 @@ ol li{
       margin-bottom: 15px;
    }
 }
+
+#likenappi {
+   background-color: #FDEB4F;
+   width: fit-content;
+   padding: 0px;
+   margin-left: 12px;
+   margin-bottom: 8px;
+   border: none;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   border-radius: 0px;
+   align-self: center;
+   transition: 0s;
+   margin-top: 0px;
+   font-size: 18px;
+}
+
+#likenappi:hover {
+   background-color: #FDEB4F;
+}
+
+#likelogo {
+   width: 20px;
+   height: 20px;
+   border-radius: 0px;
+   right: 50px;
+   margin-left: 4px;
+   margin-bottom: -1.7px;
+   fill: red;
+}
